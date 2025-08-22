@@ -1,0 +1,171 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+
+}
+body {
+    font-family: "Work Sans" ,sans-serif;
+}
+.container {
+    padding-left:15px;
+    padding-right:15px;
+    margin-left:auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+/* Start Heading Section */
+.header {
+    padding:20px;
+}
+.header .container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    width:70px;
+}
+.header .links {
+    position:relative;
+    cursor: pointer;
+}
+.header .links .icon {
+    width:30px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header .links .icon span {
+     background-color: black;
+     margin-bottom: 5px;
+}
+
+.header .links .icon span:first-child {
+    height:3px;
+    width:100%;
+}
+
+.header .links .icon span:nth-child(2) {
+    height:3px;
+    width:50%;
+    transition: 0.3s;
+}
+.header .links:hover .icon:hover span:nth-child(2){
+    width:100%;
+}
+
+.header .links .icon span:last-child {
+    height:3px;
+    width:100%;
+}
+
+
+.header .links ul {
+    margin:0;
+    padding:0;
+    width:200px;
+    list-style: none;
+    background-color: #EEE;
+    position: absolute;
+    right:0;
+    top:calc(100% + 10px);
+    display: none;
+}
+.header .links:hover ul {
+    display:block;
+    z-index: 1;
+}
+.header .links ul::before {
+    content:'';
+    border:10px solid;
+    border-color:transparent transparent #EEE transparent;
+    position: absolute;
+    right:5px;
+    top:-20px;
+}
+.header .links ul li {
+    width:100%;
+    padding:20px;
+}
+.header .links ul li a {
+    text-decoration: none;
+    color:black;
+    transition: 0.3s;
+}
+.header .links ul li:hover a {
+    padding-left:25px;
+}
+/* END Heading Section */
+
+/* START Start Section */
+.start{
+    width:100%;
+    background-image: url("../images/landing.jpg");
+    background-size: cover;
+     position: relative;
+    height:calc(100vh - 64px);
+}
+.start .text {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.start .text h1 {
+    font-size:50px;
+    font-weight: 700;
+    color:#10CAB7;
+}
+.start .text p {
+    width:350px;
+    font-size:20px;
+}
+
+/* End of Start Section */
+
+/* Start of Features */
+.features {
+    padding-top:50px;
+    padding-bottom: 50px;
+    background-color: #F6F6F6;
+}
+.features .container {
+    display:grid;
+    grid-template-columns: repeat(auto-fill ,minmax(300px,1fr));
+    text-align: center;
+    gap: 30px;
+}
+.features .container i {
+    font-size :40px;
+}
+.features .container .text {
+    line-height: 1.8;
+}
+@media (max-width:768px) {
+    .features .container {
+        justify-content: center;
+    }
+}
+
+/* END of Features */
