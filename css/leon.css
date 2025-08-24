@@ -312,6 +312,7 @@ body {
 .portfolio .container .project1 ,.project2,.project3 {
     flex-basis:calc(94% / 3);
     background-color: white;
+    transition: 0.3s;
 }
 @media (max-width:991px)
 {
@@ -324,7 +325,9 @@ body {
         flex-direction: column;
     }
 }
-
+.portfolio .container .project1:hover ,.project2:hover,.project3:hover {
+    padding:10px;
+}
 .portfolio .container .projects img {
     max-width: 100%;
 }
@@ -497,6 +500,8 @@ body {
 }
 .contact .container .text .social i {
     margin-left:10px;
+    font-size:30px;
+    color:black;
 }
 
 /* END of Contact */
